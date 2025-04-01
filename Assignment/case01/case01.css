@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  position: relative;
+}
+
+.wrapper div {
+  background-color: blueviolet;
+  color: aliceblue;
+  width: 80px;
+  transition: 0.5s ease-in-out; /* Smooth transition */
+}
+
+.wrapper main {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.wrapper div:hover {
+  transition: all 0.5s;
+  width: 170px;
+}
+
+main div {
+  position: relative;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+main div img {
+  width: fit-content;
+  position: absolute;
+  width: 50px;
+}
+
+main div h4 {
+  position: absolute;
+  left: -200px;
+  transition: all 0.5s ease-in-out;
+}
+
+main div:hover h4 {
+  transition: all 0.5s;
+  position: absolute;
+  left: 10px;
+}

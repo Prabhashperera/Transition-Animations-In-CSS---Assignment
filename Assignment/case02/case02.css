@@ -1,0 +1,49 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blue;
+}
+
+.circle {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  background-color: black;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 240px;
+  height: 240px;
+  border-radius: 100%;
+  border: 15px solid white;
+  border-top: 15px solid red;
+}
+
+.circle:hover::before {
+  content: "";
+  transition: all 1s;
+  transform: rotate(360deg);
+}
+
+.circle p {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  inset: 0;
+  margin: auto;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+}
